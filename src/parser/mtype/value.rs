@@ -1,19 +1,19 @@
-enum Value {
+pub enum Value {
     Number  { val: i32 },
     Bool    { val: bool },
     Str     { val: String }
 }
 
 impl Value {
-    fn new_num(val: i32) -> Value {
+    pub fn new_num(val: i32) -> Value {
         Value::Number { val }
     }
 
-    fn new_bool(val: bool) -> Value {
+    pub fn new_bool(val: bool) -> Value {
         Value::Bool { val }
     }
 
-    fn new_str(val: impl Into<String>) -> Value {
+    pub fn new_str(val: impl Into<String>) -> Value {
         Value::Str { val: val.into() }
     }
 }
